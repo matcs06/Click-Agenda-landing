@@ -20,7 +20,7 @@ const MainHero = () => {
           <div className="rounded-md shadow">
             <a
               href={mainHero.primaryAction.href}
-              className={`w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-background bg-primary hover:bg-secondary hover:text-white md:py-4 md:text-lg md:px-10`}
+              className={`w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-background bg-primary hover:bg-white hover:text-black hover:transition-colors md:py-4 md:text-lg md:px-10`}
             >
               {mainHero.primaryAction.text}
             </a>

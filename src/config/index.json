@@ -1,7 +1,7 @@
 {
   "company": {
     "name": "React landing page 2021",
-    "logo": "/assets/images/logo.png"
+    "logo": "/assets/images/cealogo.png"
   },
   "navigation": [
     {
@@ -32,7 +32,7 @@
     "img": "/assets/images/segurando_iphone-2.png",
     "primaryAction": {
       "text": "Saiba mais",
-      "href": "#"
+      "href": "https://api.whatsapp.com/send/?phone=5511959842539&text=Ol%C3%A1+tenho+interesse+no+sistema+de+agendamentos"
     },
     "secondaryAction": {
       "text": "Email",

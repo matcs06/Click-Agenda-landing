@@ -59,10 +59,10 @@ const Menu = () => {
                 </Link>
               ))}
               <a
-                href="#"
+                href="https://www.instagram.com/clickeagenda/"
                 className={`font-medium text-primary hover:text-secondary`}
               >
-                Call to action
+                Saiba mais
               </a>
             </div>
           </nav>
