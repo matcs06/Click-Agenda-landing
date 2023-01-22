@@ -7,6 +7,26 @@ const Pricing = () => {
   const { items, title } = pricing;
   const [firstPlan, secondPlan, thirdPlan] = items;
 
+  const handleSimplePlan = (type: 'test' | 'basic' | 'pro') => {
+    let wppmessage;
+    if (type === 'basic') {
+      wppmessage =
+        'https://api.whatsapp.com/send/?phone=5511959842539&text=Tenho interesse no plano padrão de 49,99 R$';
+    }
+
+    if (type === 'test') {
+      wppmessage =
+        'https://api.whatsapp.com/send/?phone=5511959842539&text=Olá, quero fazer um teste gratuito de 15 dias';
+    }
+
+    if (type === 'pro') {
+      wppmessage =
+        'https://api.whatsapp.com/send/?phone=5511959842539&text=Olá, tenho interesse no plano PRO de 99,99 R$';
+    }
+
+    window.open(wppmessage);
+  };
+
   return (
     <section className={`bg-background py-8`} id="pricing">
       <div className={`container mx-auto px-2 pt-4 pb-12 text-primary`}>
@@ -24,15 +44,20 @@ const Pricing = () => {
           className={`flex flex-col sm:flex-row justify-center pt-12 my-12 sm:my-4`}
         >
           <div
-            className={`flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-background mt-4`}
+            className={`flex flex-col w-5/6 lg:w-1/4  mx-auto cursor-pointer lg:mx-0 rounded-none lg:rounded-l-lg bg-background mt-4`}
+            onClick={() => handleSimplePlan('test')}
           >
             <div
-              className={`flex-1 bg-background text-gray-600 rounded-t rounded-b-none overflow-hidden shadow`}
+              className={`flex-1 bg-background text-gray-600 hover:text-gray-900  rounded-t rounded-b-none overflow-hidden shadow`}
             >
-              <div className={`p-8 text-3xl font-bold text-center border-b-4`}>
+              <div
+                className={`p-8 text-3xl font-bold text-center hover:text-gray-900  border-b-4 `}
+              >
                 {firstPlan?.name}
               </div>
-              <ul className={`w-full text-center text-sm`}>
+              <ul
+                className={`w-full text-center text-sm hover:text-gray-900  `}
+              >
                 {firstPlan?.features.map((feature) => (
                   <li
                     className={`border-b py-4`}
@@ -44,10 +69,10 @@ const Pricing = () => {
               </ul>
             </div>
             <div
-              className={`flex-none mt-auto bg-background rounded-b rounded-t-none overflow-hidden shadow p-6`}
+              className={`flex-none mt-auto bg-background rounded-b hover:text-gray-900 rounded-t-none overflow-hidden shadow p-6`}
             >
               <div
-                className={`w-full pt-6 text-3xl text-gray-600 font-bold text-center`}
+                className={`w-full pt-6 text-3xl text-gray-600 font-bold text-center hover:text-gray-900 `}
               >
                 {firstPlan?.price}
                 <span className={`text-base`}> {firstPlan?.priceDetails}</span>
@@ -55,10 +80,11 @@ const Pricing = () => {
             </div>
           </div>
           <div
-            className={`flex flex-col w-5/6 lg:w-1/3 mx-auto lg:mx-0 rounded-lg bg-background mt-4 sm:-mt-6 shadow-lg z-10`}
+            className={`flex flex-col w-5/6 lg:w-1/3 mx-auto lg:mx-0 rounded-lg cursor-pointer bg-background mt-4 sm:-mt-6 shadow-lg z-10`}
+            onClick={() => handleSimplePlan('basic')}
           >
             <div
-              className={`flex-1 bg-background rounded-t rounded-b-none overflow-hidden shadow`}
+              className={`flex-1 bg-background text-gray-600 hover:text-gray-900 rounded-t rounded-b-none overflow-hidden shadow`}
             >
               <div className={`w-full p-8 text-3xl font-bold text-center`}>
                 {secondPlan?.name}
@@ -80,22 +106,27 @@ const Pricing = () => {
             <div
               className={`flex-none mt-auto bg-background rounded-b rounded-t-none overflow-hidden shadow p-6`}
             >
-              <div className={`w-full pt-6 text-4xl font-bold text-center`}>
+              <div
+                className={`w-full pt-6 text-3xl hover:text-gray-900  text-gray-600 font-bold text-center`}
+              >
                 {secondPlan?.price}
                 <span className={`text-base`}> {secondPlan?.priceDetails}</span>
               </div>
             </div>
           </div>
           <div
-            className={`flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-primary mt-4`}
+            className={`flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-primary mt-4 cursor-pointer`}
+            onClick={() => handleSimplePlan('pro')}
           >
             <div
-              className={`flex-1 bg-background text-gray-600 rounded-t rounded-b-none overflow-hidden shadow`}
+              className={`flex-1 bg-background text-gray-600 hover:text-gray-900 rounded-t rounded-b-none overflow-hidden shadow`}
             >
-              <div className={`p-8 text-3xl font-bold text-center border-b-4`}>
+              <div
+                className={`p-8 text-3xl font-bold text-center border-b-4 hover:text-gray-900 `}
+              >
                 {thirdPlan?.name}
               </div>
-              <ul className={`w-full text-center text-sm`}>
+              <ul className={`w-full text-center text-sm hover:text-gray-900 `}>
                 {thirdPlan?.features.map((feature) => (
                   <li
                     className={`border-b py-4`}
@@ -107,10 +138,10 @@ const Pricing = () => {
               </ul>
             </div>
             <div
-              className={`flex-none mt-auto bg-background rounded-b rounded-t-none overflow-hidden shadow p-6`}
+              className={`flex-none mt-auto hover:text-gray-900  bg-background rounded-b rounded-t-none overflow-hidden shadow p-6`}
             >
               <div
-                className={`w-full pt-6 text-3xl text-gray-600 font-bold text-center`}
+                className={`w-full pt-6 text-3xl hover:text-gray-900  text-gray-600 font-bold text-center`}
               >
                 {thirdPlan?.price}
                 <span className={`text-base`}> {thirdPlan?.priceDetails}</span>
