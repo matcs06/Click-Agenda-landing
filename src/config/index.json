@@ -44,7 +44,7 @@
     "items": [
       {
         "title": "Crie seus própios horários e Serviços",
-        "description": "Com Click&Agenda voçê consegue definir seus horários de disponibilidade e também adicionar seus próprios serviços para que seus clientes tenham acesso.",
+        "description": "Com Click&Agenda você consegue definir seus horários de disponibilidade e também adicionar seus próprios serviços para que seus clientes tenham acesso.",
         "img": "/assets/images/click&agendatela.png"
       },
       {
@@ -76,7 +76,7 @@
       },
       {
         "name": "Controle financeiro",
-        "description": "De bonus, você tem incluso no sistema um gerenciador financeiro que está integrado com o calendário de agendamentos, onde você pode adicionar os pagamentos realizados e pendentes.",
+        "description": "De bonus, você tem incluso no sistema, um gerenciador financeiro que está integrado com o calendário de agendamentos, onde você pode adicionar os pagamentos realizados e pendentes.",
         "icon": "/assets/images/finance-business-money-payment-inflation-svgrepo-com.svg"
       }
     ]
